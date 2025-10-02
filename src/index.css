@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ui-bg: #0b1220;
+  --ui-surface: rgba(255, 255, 255, 0.06);
+  --ui-border: rgba(255, 255, 255, 0.12);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(120deg, #0b1220, #0c1730, #101f42, #0b1220);
+  background-size: 300% 300%;
+  animation: gradientShift 16s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.glass {
+  background: var(--ui-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--ui-border);
+  border-radius: 16px;
+}
+
+input, select, button, textarea {
+  outline: none;
+}
+
