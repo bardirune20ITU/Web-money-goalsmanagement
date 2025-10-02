@@ -3,9 +3,8 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import type { Transaction, Goal, AppData } from './types';
 
 function newId(): string {
-  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
-    // @ts-expect-error safe in modern browsers
-    return crypto.randomUUID();
+  if (typeof crypto !== 'undefined' && typeof (crypto as any).randomUUID === 'function') {
+    return (crypto as any).randomUUID();
   }
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
