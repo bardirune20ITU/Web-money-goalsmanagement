@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/store.ts","./src/types.ts","./src/utils.ts","./src/components/AnimatedIcon.tsx","./src/components/AnimatedNumber.tsx","./src/components/GoalProgress.tsx","./src/pages/Dashboard.tsx","./src/pages/Goals.tsx","./src/pages/Settings.tsx","./src/pages/Transactions.tsx"],"version":"5.9.3"}
